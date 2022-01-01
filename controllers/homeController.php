@@ -6,21 +6,16 @@
             parent::__construct();
         }
 
-        public function home($params)
+        public function home()
         {
             //echo "Mensaje desde el controllador";
-            $this->views->getView($this, 'home');
-        }
-
-        public function datos($params)
-        {
-            echo "Mensaje desde el controllador". $params;
-        }
-
-        public function carrito($params)
-        {
-            $carrito = $this->model->getCarrito($params);
-            echo $carrito;
+            $data['page_id'] = 'home';
+            $data['tag_page'] = 'Tienda virtual';
+            $data['page_title'] = 'Página principal';
+            $data['page_name'] = 'home';
+            $data['page_content'] = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ducimus iste ex nam, quo maxime? Aperiam adipisci dicta animi quia natus voluptatibus cupiditate fugit voluptate sequi odio! Hic, vel placeat!';
+            
+            $this->views->getView($this, 'home',$data );
         }
     }
 
