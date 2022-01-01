@@ -17,6 +17,12 @@
             
             $this->views->getView($this, 'home',$data );
         }
+
+        public function insertar()
+        {
+            $data = $this->model->setUser('Jack', 25);
+            print_r($data);
+        }
     }
 
 ?>
