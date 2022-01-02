@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Página no encontrada</h1>
+
+    <a href="<?php echo base_url(); ?>">Volver al home</a>
 </body>
 </html>
